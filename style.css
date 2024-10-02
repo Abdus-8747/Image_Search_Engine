@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', 'Roboto', 'Open Sans', 'Lato', 'sans-serif';
+    box-sizing: border-box;
+}
+
+body {
+    color: #FFFFFF;
+    position: relative;
+    height: 100%; 
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 42, 110, 0.7);
+    z-index: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 100px auto 50px;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: #fff;
+    position: relative; 
+    z-index: 1; 
+}
+
+form {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    height: 80px;
+    background: #3B3A98;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative; 
+    z-index: 1; 
+}
+
+form input {
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 0 30px;
+}
+
+form button {
+    padding: 0 40px;
+    color: #FFFFFF;
+    font-size: 18px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    background: #FF5722;
+    height: 100%;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #FF3D00;
+}
+
+::placeholder {
+    color: #B0B0B0;
+    font-size: 18px;
+}
+
+#show-more {
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    background: #FF5722;
+    height: 50px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 20px auto 100px;
+    display: none;
+    transition: background 0.3s;
+    position: relative;
+    z-index: 1;
+
+}
+
+#show-more:hover {
+    background: #FF3D00;
+}
+
+#search-result {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+#search-result img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    form {
+        flex-direction: column;
+        height: auto;
+    }
+
+    form input {
+        margin-bottom: 10px;
+    }
+
+    #show-more {
+        width: 90%;
+    }
+
+    #search-result {
+        grid-template-columns: 1fr;
+    }
+}
